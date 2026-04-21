@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Customer Segmentation</title>
+            <style>
+                body {
+                    font-family: Arial;
+                    background: #f4f6f8;
+                    padding: 30px;
+                }
+                .box {
+                        background: white;
+                        padding: 20px;
+                        width: 350px;
+                        margin: auto;
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 10px #ccc;
+                    }
+                    input, button {
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 10px;
+                    }
+                    button {
+                        background: #2c7be5;
+                        color: white;
+                        border: none;
+                    }
+                    .result {
+                        margin-top: 20px;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="box">
+                    <h2>Customer Segmentation</h2>
+
+                    <form method="POST">
+                        <label>Annual Income</label>
+                        <input type="number" name="income" required>
+
+                        <label>Spending Score</label>
+                        <input type="number" name="spending" required>
+
+                        <button type="submit">Predict Segment</button>
+                    </form>
+
+                    {% if result %}
+                    <div class="result">
+                        <strong>{{ result }}</strong>
+                    </div>
+                    {% endif %}
+                </div>
+            </style>
+        </head>
+    </html>
